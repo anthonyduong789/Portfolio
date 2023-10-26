@@ -1,0 +1,52 @@
+/* 
+  Initial styling for the button
+*/
+.hover-button {
+    /* 
+       Set the size of the background to be twice the width of the button 
+       This means only half of the background is visible at a time 
+    */
+    background-size: 200% 100%;
+    
+    /* 
+       Create a linear gradient that goes from left (grey) to right (dodgerblue).
+       Since the background-size is twice the button's width, we will initially only see the grey color. 
+    */
+    background-image: linear-gradient(to right, rgb(200, 91, 91) 50%, dodgerblue 50%);
+    
+    /* Remove any default borders from the button */
+    border: none;
+    
+    /* Define padding and font size for button content */
+    padding: 15px 30px;
+    font-size: 16px;
+    
+    /* Change cursor to pointer to indicate clickability */
+    cursor: pointer;
+    
+    /* Set button text color */
+    color: white;
+    
+    /* Round the button corners */
+    border-radius: 5px;
+    
+    /* Remove browser's default focus outline */
+    outline: none;
+    
+    /* 
+       Smoothly animate any changes to the background position over 0.3 seconds.
+       This will make the hover effect smooth.
+    */
+    transition: background-position 0.3s ease;
+}
+
+/* 
+  Styling applied when the button is hovered over
+*/
+.hover-button:hover {
+    /* 
+       When hovered, shift the background to the left by 100% of the button's width.
+       This will reveal the dodgerblue half of the gradient.
+    */
+    background-position: -100% 0;
+}

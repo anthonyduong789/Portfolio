@@ -1,24 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+// import "./App.css";
+import Section1 from './section_1';
+import GradientButton from "./GradientButton";
+import HoverLarge from "./Hoverlarge";
+import SmoothScrollPage from './SmoothScrollPage';
+import Test from './test';
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Test />
+      {/* <Section1 />
+       */}
+      {/* <SmoothScrollPage /> */}
     </div>
+
   );
 }
 
