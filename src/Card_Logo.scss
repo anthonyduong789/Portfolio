@@ -1,0 +1,46 @@
+$height: 130px;
+$width: 150px;
+
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 0 auto;
+    }
+
+.logo_image{
+    height: $height;
+    width: $width;
+    margin-bottom: 20px;
+    // border-radius: 65px 65px 65px 65px;
+    
+
+}
+
+.title{
+    font-family: Raleway-bold;
+    font-size: 30px;
+    margin: 0%;
+    color: #626262;
+
+}
+
+.description{
+    font-family: Raleway-bold;
+    color: #616161;
+    font-weight: 500;
+    width: 70%;
+    margin: 0 auto;
+}
+
+.child-container {
+    flex: 1;
+    // margin: 10px;
+    // padding: 20px;
+    background-color: #e0e0e0;
+    // border: 1px solid #ccc;
+    // box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    min-width: calc(20% - 20px); /* Four containers in a row minus margin */
+}

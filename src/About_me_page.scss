@@ -1,0 +1,98 @@
+
+// dimensions of underline of About
+$underline-width: 120px;
+$underline-height: 6px;
+
+// color of About and underline
+$c1: #FF4B91;
+
+$background: #FDE5EC;
+
+
+.view{
+    display: flex; 
+    justify-content: center;
+
+    min-height : 100vh; 
+    // flex-flow: nowrap;
+    background-color: $background;
+}
+.about-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    // background-color: white;
+    // border: 2px solid black;
+   
+    width: 1200px;
+}
+.abtme_box{
+    display: flex;
+    justify-content: center;
+ 
+}
+.about{
+    font-family: Regular;
+    color: $c1;
+    font-family: 'Inter Regular', sans-serif;
+    font-size: 40px;
+    line-height: 38px;
+    font-weight: bold;
+    margin-bottom: 10px;
+
+}
+
+.underline{
+    height: $underline-height;
+    width: $underline-width;
+    background-color: $c1;
+    margin-bottom: 70px;
+}
+
+.card_4{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-content: center;
+    /* how to center css grid */
+    margin-bottom: 70px;
+    // grid-template-rows: 1fr 1fr;
+    // flex-wrap: wrap;
+    // justify-content: space-around;
+}
+.card_2{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+.b2{
+  
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+.a2{
+    width: 500px;
+    text-align: center;
+}
+
+
+// .child-container {
+//     // flex: 1;
+//     // margin: 10px;
+//     // padding: 20px;
+//     background-color: #e0e0e0;
+//     // border: 1px solid #ccc;
+//     // box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+//     min-width: calc(20% - 20px); /* Four containers in a row minus margin */
+// }
+
+/* Responsive styles for 500px or less */
+@media (max-width: 700px) {
+    .card_4{
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+    .card_2{
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
