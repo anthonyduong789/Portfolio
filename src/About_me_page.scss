@@ -1,12 +1,45 @@
-
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 // dimensions of underline of About
 $underline-width: 120px;
 $underline-height: 6px;
 
 // color of About and underline
-$c1: #FF4B91;
+$c1: #ff4b9066;
 
 $background: #FDE5EC;
+
+
+@keyframes slide-in-left {
+
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    20% {
+        transform: translateX(-80%);
+
+    }
+    40% {
+        transform: translateX(-60%);
+        opacity: 0.6;   
+    }
+    60% {
+        transform: translateX(-40%);
+
+    }
+    80% {
+        transform: translateX(-20%);
+        opacity: 0.9;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+    
+
 
 
 .view{
@@ -15,7 +48,7 @@ $background: #FDE5EC;
 
     min-height : 100vh; 
     // flex-flow: nowrap;
-    background-color: $background;
+    // background-color: $background;
 }
 .about-container{
     display: flex;
@@ -39,6 +72,9 @@ $background: #FDE5EC;
     line-height: 38px;
     font-weight: bold;
     margin-bottom: 10px;
+    opacity: 0;
+    animation: slide-in-left 0.7s ease-in-out;
+    animation-fill-mode: forwards;
 
 }
 
@@ -47,6 +83,10 @@ $background: #FDE5EC;
     width: $underline-width;
     background-color: $c1;
     margin-bottom: 70px;
+    opacity: 0;
+    animation: slide-in-left 0.7s ease-in-out 0.5s;
+    animation-fill-mode: forwards;
+
 }
 
 .card_4{
@@ -70,9 +110,24 @@ $background: #FDE5EC;
     align-items: center;
     
 }
+
+.me-image {
+    height: 300px;
+    width: 300px;
+}
+
+.title1{
+    color: $c1;
+}
+
+
 .a2{
-    width: 500px;
-    text-align: center;
+    width: 400px;
+    text-align: left;
+    font-family: "Source Code Pro", monospace;
+    font-size: 18px;
+    font-weight: 600;
+    color: #000000b3;
 }
 
 

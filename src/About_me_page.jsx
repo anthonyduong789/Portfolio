@@ -1,7 +1,7 @@
 import React from "react";
 import fast_logo from "./images/fast.png";
 import Card_logo from "./Card_Logo";
-
+import me from "./images/me.png";
 import t1 from "./images/t1.png";
 import team from "./images/c1.png";
 
@@ -45,13 +45,13 @@ function AboutMePage() {
         <div>
           <div class="card_2">
             <div class="b2">
-              <img src={fast_logo} alt="logo" className="logo_image" />
+              <img src={me} alt="logo" class = "me-image"/>
               {/* <div> */}
-              <h1>Who is this guy?</h1>
+              <h1 class = "title1">Who is this guy?</h1>
               {/* </div> */}
 
               <div class="a2">
-                Im a Computer
+                I'm a Computer
                 Science undergraduate from UC Santa Cruz. Eager to dive into web
                 development and software engineering, I'm on the lookout for
                 dynamic opportunities to learn and contribute in these fields.
