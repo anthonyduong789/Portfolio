@@ -170,7 +170,31 @@ $background: #FDE5EC;
     font-size: 26px;
 }
 
-
+.card {
+    display: flex;
+    width: 60%;
+   
+    // padding: 10px;
+  }
+  
+  .card-image {
+    width: 30%;
+    object-fit: cover;
+  }
+  
+  .card-description {
+    width: 70%;
+    padding-left: 10px;
+  }
+  
+  .card-title {
+    margin: 0;
+    font-size: 24px;
+  }
+  
+  .card-text {
+    font-size: 16px;
+  }
 
 
 /* Responsive styles for 500px or less */
@@ -183,3 +207,4 @@ $background: #FDE5EC;
         grid-template-columns: repeat(1, 1fr);
     }
 }
+
