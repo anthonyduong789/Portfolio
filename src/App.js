@@ -20,6 +20,9 @@ function customScrollBy(amount, duration) {
 
 
 
+
+const animate_on_scroll = document.querySelectorAll(".animate-on-scroll");
+
 function App() {
   const div = useRef(null);  
   
@@ -46,6 +49,7 @@ function App() {
     </div>
   );
 };
+
 
 
 export default App;

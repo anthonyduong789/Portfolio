@@ -1,12 +1,17 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
 // dimensions of underline of About
 $underline-width: 120px;
 $underline-height: 6px;
 
+
+
+// Who is this guy
+$me-width: 250px;
+
 // color of About and underline
-$c1: #ff4b9066;
+$about-font-size: 35px;
+$about-color: black;
+$underline-color: black;
+$c1: black;
 
 $background: #FDE5EC;
 
@@ -54,6 +59,8 @@ $background: #FDE5EC;
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin: 0;
+    padding: 0;
     // background-color: white;
     // border: 2px solid black;
    
@@ -65,28 +72,38 @@ $background: #FDE5EC;
  
 }
 .about{
-    font-family: Regular;
-    color: $c1;
+    color: $about-color;
     font-family: 'Inter Regular', sans-serif;
-    font-size: 40px;
-    line-height: 38px;
-    font-weight: bold;
-    margin-bottom: 10px;
+    font-size: $about-font-size;
+    font-weight: boldest;
+    margin-bottom: 0;
+    
     opacity: 0;
-    animation: slide-in-left 0.7s ease-in-out;
-    animation-fill-mode: forwards;
+
+    // animation: slide-in-left 0.7s ease-in-out;
+    // animation-fill-mode: forwards;
 
 }
 
 .underline{
     height: $underline-height;
     width: $underline-width;
-    background-color: $c1;
-    margin-bottom: 70px;
+    background-color: $underline-color;
+    margin-bottom: 25px;
     opacity: 0;
+    // animation: slide-in-left 0.7s ease-in-out 0.5s;
+    // animation-fill-mode: forwards;
+
+}
+
+.slide-in-left{
     animation: slide-in-left 0.7s ease-in-out 0.5s;
     animation-fill-mode: forwards;
+}
 
+.slide-in-left-2{
+    animation: slide-in-left 0.7s ease-in-out 1s;
+    animation-fill-mode: forwards;
 }
 
 .card_4{
@@ -99,9 +116,20 @@ $background: #FDE5EC;
     // flex-wrap: wrap;
     // justify-content: space-around;
 }
+
+.Tech_label{
+    color: $c1;
+    font-family: 'Rubik Bold', sans-serif;
+    font-size: 32px;
+    margin-bottom: 10;
+    margin-top: 0;
+    text-align: center;
+}
+
 .card_2{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
 }
 .b2{
   
@@ -111,35 +139,37 @@ $background: #FDE5EC;
     
 }
 
-.me-image {
-    height: 300px;
-    width: 300px;
-}
 
+
+
+
+.Who_is_this_guy_container{
+    color: $c1;
+    // font-family: 'Rubik', sans-serif;
+    // font-size: 26px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: $me-width+60px;
+    // margin-top: 0;
+}
+.me-image {
+    height: calc(1.11737*$me-width);
+    width: $me-width;
+    border-radius: 90px;
+}
 .title1{
     color: $c1;
+    font-family: 'Rubik', sans-serif;
+    padding: 0;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 26px;
 }
 
 
-.a2{
-    width: 400px;
-    text-align: left;
-    font-family: "Source Code Pro", monospace;
-    font-size: 18px;
-    font-weight: 600;
-    color: #000000b3;
-}
 
-
-// .child-container {
-//     // flex: 1;
-//     // margin: 10px;
-//     // padding: 20px;
-//     background-color: #e0e0e0;
-//     // border: 1px solid #ccc;
-//     // box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
-//     min-width: calc(20% - 20px); /* Four containers in a row minus margin */
-// }
 
 /* Responsive styles for 500px or less */
 @media (max-width: 700px) {

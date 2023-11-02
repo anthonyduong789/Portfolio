@@ -1,0 +1,47 @@
+
+
+
+
+.progress_div{
+  display: flex;
+  flex-direction: row;
+  height: 28px;
+  width: 480px;
+  margin-bottom: 15px;
+}
+.tech_label{
+  display: flex;
+  align-items: center;
+  justify-content: center; 
+  width: 110px;
+  font-size: 14px;
+  font-family: 'Raleway Bold', sans-serif;
+  line-height: 24px;
+  background-color: #04C2C9;
+  color: white;
+}
+.progress-container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    background-color: #EEEEEE;
+  }
+  
+  .progress-bar {
+    height: 28px;
+    background-color: #00A1A7;
+    transition: width 0.3s ease;
+  }
+  
+  .percentage {
+    /* text-align: center; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Raleway', sans-serif;
+    background-color: #EEEEEE;
+    color: #666666;
+    /* font-weight: bold; */
+    font-size: 14.66px;
+  }
+
