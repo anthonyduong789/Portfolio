@@ -5,7 +5,7 @@
 .box {
   --bg-color: hsl(49 37% 94%);
   --typewriterSpeed: 3s;
-  --typewriterCharacters: 24;
+  --typewriterCharacters: 26;
   margin: 0;
   font-family: 'Rubik', sans-serif;
   
@@ -58,7 +58,7 @@
   font-weight: 600;
   opacity: 0;
   transform: translateY(3rem);
-  animation: fadeInUp 2s ease calc(var(--typewriterSpeed) + 2s) forwards;
+  animation: fadeInUp 2s ease calc(var(--typewriterSpeed) + 1.5s) forwards;
 }
 
 @keyframes typewriter {

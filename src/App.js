@@ -24,33 +24,36 @@ function customScrollBy(amount, duration) {
 const animate_on_scroll = document.querySelectorAll(".animate-on-scroll");
 
 function App() {
-  const div = useRef(null);  
-  
-  const[divHeight, setDivHeight] = useState(0);
-  useEffect(() => {
-    if(div.current){
-      setDivHeight(div.current.offsetHeight);
-      // console.log(div.current.height);
-    }
 
-    // console.log(div.current.height);
-  }, [div]);
-  const handleScroll = () => {
-    customScrollBy(divHeight, 1000);
-    console.log(divHeight);
-  }
+  const [showNavbar, setShowNavbar] = useState(false);
+
+    useEffect(() => {
+        const handleScroll = () => {
+            if (window.scrollY > window.innerHeight/2) {
+                setShowNavbar(true);
+            } else {
+                setShowNavbar(false);
+            }
+        };
+
+        window.addEventListener('scroll', handleScroll);
+
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, []);
+
+
 
   return (
-
     <div>
-      <StartPage ref={div} />
+      <StartPage />
       <AboutMePage />
-   
+      {showNavbar ? <nav className="navbar">appear</nav> : null}
     </div>
   );
-};
 
-
+}
 
 export default App;
 
