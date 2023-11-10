@@ -2,7 +2,7 @@ import React from "react";
 import "./start_page.scss";
 // import HoverLarge from './Hoverlarge';
 // import CoolButton from "./cool_button1";
-import Pink3dButton from "./Pink_3d_button";
+import Pink3dButton from "./Compnents/Pink_3d_button";
 import sound from "./images/onclick.wav";
 
 

@@ -1,15 +1,15 @@
 import React, { Component } from "react";
-import fast_logo from "./images/fast.png";
-import Card_logo from "./Card_Logo";
 import me from "./images/anthony.png";
-import t1 from "./images/t1.png";
-import team from "./images/c1.png";
-import five_guys from "./images/five-guys.gif";
+
 
 import { useEffect, useRef } from "react";
 
 import "./About_me_page.scss";
 import ProgressBar from "./ProgressBar";
+
+import AwesomeSlider from "react-awesome-slider";
+import "react-awesome-slider/dist/styles.css";
+import "react-awesome-slider/dist/custom-animations/cube-animation.css";
 
 const oberver = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
@@ -35,44 +35,38 @@ function AboutMePage() {
   const aboutMeUnderlineRef = useRef(null);
 
   useEffect(() => {
-    const targetElement = aboutMeRef.current;
-    const targetElement2 = aboutMeUnderlineRef.current;
-    const handleIntersection = (entries) => {
+    const handleIntersection = (entries, classToAdd, classToRemove) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          console.log("Element is visible!", entry.target);
-          entry.target.classList.add("slide-in-left");
+          entry.target.classList.add(classToAdd);
         } else {
-          entry.target.classList.remove("slide-in-left");
+          entry.target.classList.remove(classToRemove);
         }
       });
     };
 
-    const handleIntersection2 = (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          console.log("Element is visible!", entry.target);
-          entry.target.classList.add("slide-in-left-2");
-        } else {
-          entry.target.classList.remove("slide-in-left-2");
-        }
-      });
-    };
+    const observer = new IntersectionObserver((entries) => handleIntersection(entries, "slide-in-left", "slide-in-left"));
+    const observer2 = new IntersectionObserver((entries) => handleIntersection(entries, "slide-in-left-2", "slide-in-left-2"));
 
-    const observer = new IntersectionObserver(handleIntersection);
-    observer.observe(targetElement);
-    const observer2 = new IntersectionObserver(handleIntersection2);
-    observer2.observe(targetElement2);
-    // cleans up component on
+    observer.observe(aboutMeRef.current);
+    observer2.observe(aboutMeUnderlineRef.current);
+
     return () => {
-      observer.unobserve(targetElement);
-      observer2.unobserve(targetElement2);
+      observer.disconnect();
+      observer2.disconnect();
     };
-    // oberver.observe(target);
   }, []);
+
 
   return (
     <div class="view">
+
+{/* <AwesomeSlider
+          animation="cubeAnimation"
+          class="content"
+          bullets={false}
+        > */}
+
       <div class="about-container">
         <h1 class="about" ref={aboutMeRef}>
           About Me
@@ -98,72 +92,23 @@ function AboutMePage() {
               <div>
                 <h1 class="Tech_label">🛠️Tech Stack🛠️</h1>
                 {/* <div class="a2">  */}
-                <ProgressBar name={"CSS"} percentage={90} />
                 <ProgressBar name={"HTML"} percentage={90} />
-                <ProgressBar name={"Node.js"} percentage={70} />
-                <ProgressBar name={"React"} percentage={70} />
+                <ProgressBar name={"CSS"} percentage={90} />
                 <ProgressBar name={"Javascript"} percentage={90} />
+                <ProgressBar name={"React"} percentage={80} />
+                <ProgressBar name={"Python"} percentage={70} />
+                <ProgressBar name={"C/C++"} percentage={60} />
                 <ProgressBar name={"Node.js"} percentage={90} />
-                <ProgressBar name={"Python"} percentage={90} />
-                <ProgressBar name={"C/C++"} percentage={90} />
-                <ProgressBar name={""} percentage={90} />
+                <ProgressBar name={"MySQL"} percentage={90} />
+                <ProgressBar name={"React-Native"} percentage={90} />
                 {/* </div> */}
               </div>
             </div>
           </div>
-          <div>
-          <h1>
-              Interpersonal Abilities and Diverse Professional Backgrounds
-            </h1>
-          <div
-            style={{ display: "grid", gridTemplateColumns: "1fr", gap: "30px" }}
-          >
-            
-            <div
-              class="card"
-              style={{
-                backgroundColor: "lightblue",
-                border: "4px solid black",
-              }}
-            >
-              <img src={five_guys} alt="Image" class="card-image" />
-              <div class="card-description">
-                <h2 class="card-title">Five Guys Training Manager</h2>
-                <p class="card-text">
-                  In additon to my technical skills, I have a diverse set of
-                  soft skills that I have developed through my experiences in
-                  the workforce. I have worked in the food industry for over 5
-                  years, and have been a training manager for over 2 years.
-                </p>
-              </div>
-            </div>
-
-            <div class="card">
-              <h2 style={{ width: "30%", marginRight:"10px"}}>Excellent Communicator </h2>
-
-              <div >
-                <p class="card-text">
-                  "Working at Five Guys during college sharpened my
-                  communication skills. I learned to lead diverse age groups,
-                  consistently conveying ideas with respect and clarity."
-                </p>
-              </div>
-            </div>
-            <div class="card">
-              <h2 style={{ width: "30%", marginRight:"10px"}}>Scrum</h2>
-
-              <div >
-                <p class="card-text">
-                  "Working at Five Guys during college sharpened my
-                  communication skills. I learned to lead diverse age groups,
-                  consistently conveying ideas with respect and clarity."
-                </p>
-              </div>
-            </div>
-          </div>
-          </div>
         </div>
       </div>
+      {/* </AwesomeSlider> */}
+
     </div>
   );
 }

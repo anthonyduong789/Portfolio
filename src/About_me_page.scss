@@ -1,16 +1,17 @@
 // dimensions of underline of About
-$underline-width: 120px;
-$underline-height: 6px;
+$underline-width: 80px;
+$underline-height: 4px;
 
 
 
 // Who is this guy
-$me-width: 250px;
+$me-width: 240px;
+
 
 // color of About and underline
 $about-font-size: 35px;
-$about-color: black;
-$underline-color: black;
+$about-color: #444649;
+$underline-color: #444649;
 $c1: black;
 
 $background: #FDE5EC;
@@ -78,7 +79,7 @@ $background: #FDE5EC;
     font-family: 'Inter Regular', sans-serif;
     font-size: $about-font-size;
     font-weight: boldest;
-    margin-bottom: 0;
+    margin-bottom: 8px;
     
     opacity: 0;
 
@@ -91,7 +92,7 @@ $background: #FDE5EC;
     height: $underline-height;
     width: $underline-width;
     background-color: $underline-color;
-    margin-bottom: 25px;
+    margin-bottom: 15px;
     opacity: 0;
     // animation: slide-in-left 0.7s ease-in-out 0.5s;
     // animation-fill-mode: forwards;
@@ -153,7 +154,7 @@ $background: #FDE5EC;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: $me-width+60px;
+    width: $me-width+80px;
     // margin-top: 0;
 }
 .me-image {

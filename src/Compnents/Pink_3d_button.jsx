@@ -1,6 +1,6 @@
 import React from "react";
 import "./Pink_3d_button.scss";
-import image from "./images/arrow_icon.png";
+import image from "../images/arrow_icon.png";
 
 const Pink_3d_button = ({ text, onClick }) => {
   return (
