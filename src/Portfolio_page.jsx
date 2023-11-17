@@ -66,7 +66,7 @@ function Portfolio_page() {
   return (
     /* write a dive that take up minium the entire vewing screen */
     //write a dive that take up minium the entire vewing screen
-    <div style={{ minHeight: "100vh", width: "100%", display:"flex", justifyContent: "center", alignItems: 'center', flexDirection:'column', }}>
+    <div id="portfolio" style={{ minHeight: "100vh", width: "100%", display:"flex", justifyContent: "center", alignItems: 'center', flexDirection:'column', paddingTop:"30px"}}>
        
        <h1 class="portfolio" ref={aboutMeRef}>
        Portfolio
@@ -87,13 +87,13 @@ function Portfolio_page() {
               image={gapTech}
             />
           </div>
-          <div style={{ background: "transparent" }}>
+          {/* <div style={{ background: "transparent" }}>
             <PortfolioCard
               title={"hi"}
               description={"flkalkfdjaslkfjlksadjf"}
               image={fiveGuys}
             />
-          </div>
+          </div> */}
         </AwesomeSlider>
       
       </div>

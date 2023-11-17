@@ -59,16 +59,9 @@ function AboutMePage() {
 
 
   return (
-    <div class="view">
-
-{/* <AwesomeSlider
-          animation="cubeAnimation"
-          class="content"
-          bullets={false}
-        > */}
-
-      <div class="about-container">
-        <h1 class="about" ref={aboutMeRef}>
+    <div  id="about" class="view" >
+      <div  class="about-container">
+        <h1  class="about" ref={aboutMeRef}>
           About Me
         </h1>
         <div class="underline" ref={aboutMeUnderlineRef}></div>

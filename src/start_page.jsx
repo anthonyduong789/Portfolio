@@ -10,14 +10,18 @@ import sound from "./images/onclick.wav";
   
 function StartPage() {
 
-  const handleClick = () => {
+  const handleClick = (sectionId) => {
     new Audio(sound).play();
+    const section = document.getElementById(sectionId);
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth' });
+    }
     // get the height of the box div
     // customScrollBy(boxHeight, 1000); // scroll down by the height of the box div in 1 second
   };
 
   return (
-    <div >
+    <div id ="home">
       <div className="box">
         {/* <div > */}
           <h1 className="main_text">Hello, my name is Anthony.</h1>
@@ -25,7 +29,7 @@ function StartPage() {
 
           <Pink3dButton
             onClick={() => {
-              handleClick();
+              handleClick('about');
             }}
             className="subtitle"
             text={"View my site"}

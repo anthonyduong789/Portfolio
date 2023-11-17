@@ -1,4 +1,5 @@
 // dimensions of underline of About
+@import 'variables';
 $underline-width: 80px;
 $underline-height: 4px;
 
@@ -51,8 +52,7 @@ $background: #FDE5EC;
 .view{
     display: flex; 
     justify-content: center;
-
-    min-height : 100vh; 
+    min-height : 60vh; 
     // flex-flow: nowrap;
     // background-color: $background;
 }
@@ -60,7 +60,6 @@ $background: #FDE5EC;
     display: flex;
     flex-direction: column;
     align-items: center;
-    
     margin: 0;
     margin-top: 3rem;
     padding: 0;

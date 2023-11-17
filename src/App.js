@@ -7,6 +7,8 @@ import Portfolio_page from "./Portfolio_page";
 import ThreeDbutton from "./Compnents/ThreeDButton";
 import Interpersonal_page from "./Other_pages";
 import Contact from "./contact";
+import SmoothScrollPage from "./SmoothScrollPage";
+import Navbar from "./navbar";
 
 
 function customScrollBy(amount, duration) {
@@ -57,12 +59,15 @@ function App() {
 
   return (
     <div>
+      {/* <SmoothScrollPage /> */}
+      <Navbar />
       <StartPage />
       <AboutMePage />
-      <Portfolio_page />
-      {/* <Interpersonal_page /> */}
+      <Portfolio_page /> 
       <Contact />
-      {/* <ThreeDbutton /> */}
+     
+    
+      
 
     </div>
   );
