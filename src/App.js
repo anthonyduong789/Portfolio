@@ -60,8 +60,10 @@ function App() {
   return (
     <div>
       {/* <SmoothScrollPage /> */}
+   
       <Navbar />
       <StartPage />
+     
       <AboutMePage />
       <Portfolio_page /> 
       <Contact />

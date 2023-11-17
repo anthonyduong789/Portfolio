@@ -1,20 +1,26 @@
 import React from "react";
 import "./navbar.scss";
+import { useState, useEffect } from "react";
 
 function Navbar() {
-  // const handleAnchorClick = (event) => {
-  //     event.preventDefault();
-  //     const anchorHref = event.currentTarget.getAttribute('href');
-  //     const targetElement = document.querySelector(anchorHref);
 
-  //     if (targetElement) {
-  //       window.scrollTo({
-  //         top: targetElement.offsetTop,
-  //         behavior: 'smooth',
-  //       });
-  //     }
-  //   };
-  return (
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => {
+      setIsVisible(window.scrollY > 400);
+    };
+
+    // Add scroll event listener
+    window.addEventListener('scroll', onScroll);
+
+    // Clean up the scroll event listener
+    return () => {
+      window.removeEventListener('scroll', onScroll);
+    };
+  }, []);
+
+  return( isVisible ? (
     <nav className="applyNav">
       <ul className="applyUl" style={{ listStyleType: "none" }}>
         <li className="applyLi">
@@ -40,7 +46,8 @@ function Navbar() {
       </ul>
       
     </nav>
-  );
+  ) :null
+  )
 }
 
 export default Navbar;
