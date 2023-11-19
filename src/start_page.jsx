@@ -1,5 +1,5 @@
 import React from "react";
-import "./start_page.scss";
+import styles from "./start_page.module.scss";
 // import HoverLarge from './Hoverlarge';
 // import CoolButton from "./cool_button1";
 import Pink3dButton from "./Compnents/Pink_3d_button";
@@ -22,16 +22,16 @@ function StartPage() {
 
   return (
     <div id ="home">
-      <div className="box">
+      <div className={styles.box}>
         {/* <div > */}
-          <h1 className="main_text">Hello, my name is Anthony.</h1>
-          <p className="subtitle">Welcome to my website!</p>
+          <h1 className={styles.main_text}>Hello, my name is Anthony.</h1>
+          <p className={styles.subtitle}>Welcome to my website!</p>
 
           <Pink3dButton
             onClick={() => {
               handleClick('about');
             }}
-            className="subtitle"
+            className={styles.subtitle}
             text={"View my site"}
           />
         {/* </div> */}
