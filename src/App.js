@@ -9,7 +9,8 @@ import Interpersonal_page from "./Other_pages";
 import Contact from "./contact";
 import SmoothScrollPage from "./SmoothScrollPage";
 import Navbar from "./navbar";
-
+import NavButton  from "./navButton/navButton";
+// import ContactFormBoostrap from "./get_in_touch";
 
 function customScrollBy(amount, duration) {
   const perTick = amount / (duration / 10);
@@ -62,13 +63,14 @@ function App() {
       {/* <SmoothScrollPage /> */}
    
       <Navbar />
+      {/* <NavButton name="fsdf" /> */}
       <StartPage />
      
       <AboutMePage />
       <Portfolio_page /> 
       <Contact />
-     
-    
+      
+
       
 
     </div>

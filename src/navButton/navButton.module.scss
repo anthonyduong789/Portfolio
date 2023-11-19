@@ -1,0 +1,91 @@
+// body {
+//     margin: 0;
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+//     height: 100vh;
+//     background-color: #222;
+//    }
+
+.a1 {
+  display: inline-block;
+  // margin-top: 10px;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 20px;
+  font-family: verdana;
+  // color: #f6b93b;
+  color: #222;
+  // color: #427D9D;
+  letter-spacing: 3px;
+  padding: 10px 15px; /* top and bottom 5px left and right 10px */
+  margin: 0px 50px;
+  position: relative;
+  // border-radius: 5px;
+  // border: 3px solid #f6b93b;
+  transition: all 0.2s;
+  overflow: hidden;
+}
+
+.a1:before,
+.a1:after,
+.span1:before,
+.span1:after {
+  content: "";
+  position: absolute;
+  width: 25%;
+  height: 100%;
+  // background-color: #f6b93b;
+  background-color: #ADD8E6;
+  z-index: -1;
+  transition: all 0.1s;
+}
+
+.a1:before {
+  top: 100%;
+  left: 0%;
+}
+
+.a1:hover:before {
+  top: 0;
+  left: 0;
+}
+
+.a1:after {
+  top: -100%;
+  right: 0;
+  transition-delay: 0.3s;
+}
+
+.a1:hover:after {
+  top: 0;
+  right: 0;
+}
+
+.a1 .span1:before {
+  top: -100%;
+  left: 25%;
+  transition-delay: 0.1s;
+}
+
+.a1:hover .span1:before {
+  top: 0;
+  left: 25%;
+}
+
+.a1 .span1:after {
+  bottom: -100%;
+  right: 25%;
+  transition-delay: 0.2s;
+}
+
+.a1:hover .span1:after {
+  bottom: 0;
+  right: 25%;
+}
+
+.a1:hover {
+  color: #222;
+  font-weight: 600;
+  // font-size: 27px;
+}

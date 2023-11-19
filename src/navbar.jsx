@@ -1,6 +1,8 @@
 import React from "react";
 import "./navbar.scss";
 import { useState, useEffect } from "react";
+import NavButton from "./navButton/navButton";
+
 
 function Navbar() {
 
@@ -24,24 +26,29 @@ function Navbar() {
     <nav className="applyNav">
       <ul className="applyUl" style={{ listStyleType: "none" }}>
         <li className="applyLi">
-          <a className="applyA" href="#home">
+          {/* <a className="applyA" href="#home">
             home
-          </a>
+          </a> */}
+          <NavButton name="home" link="home" />
         </li>
         <li className="applyLi">
-          <a className="applyA" href="#about">
+
+          {/* <a className="applyA" href="#about">
             About me
-          </a>
+          </a> */}
+          <NavButton name="about" link="about" />
         </li>
         <li className="applyLi">
-          <a className="applyA" href="#portfolio">
+          {/* <a className="applyA" href="#portfolio">
             Portfolio
-          </a>
+          </a> */}
+          <NavButton name="portfolio" link="portfolio" />
         </li>
         <li className="applyLi">
-          <a className="applyA" href="#contact">
+          {/* <a className="applyA" href="#contact">
             Contact
-          </a>
+          </a> */}
+          <NavButton name="contact" link="contact" />
         </li>
       </ul>
       
