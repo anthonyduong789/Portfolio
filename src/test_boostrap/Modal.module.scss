@@ -1,0 +1,94 @@
+
+
+$modalHeight: 80%;
+$modalWidth: 35em;
+
+.modalOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 1000;
+
+  }
+  
+  .modal {
+    background-color: white;
+    padding: 3em 4em;
+    // padding: 20px;
+    border-radius: 10px;
+    // border: 10px solid black;
+    height: $modalHeight;
+    width: $modalWidth;
+  }
+  
+
+.imgContainer {
+  // height: 70%;
+}
+
+  .modalImage {
+    max-width: 100%;
+    // display: block; // For centering if necessary
+  }
+
+  .exit{
+    display: flex;
+    justify-content: right;
+    cursor: pointer;
+  }
+  .Xicon{
+    font-size: 30px;
+    margin-right: 10px;
+  }
+
+  .title{
+    font-size: 3em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 5%;
+  }
+  .description{
+    margin: 32px, 22px;
+    // margin-top: 1rem;
+    font-size: 1.3em;
+
+  }
+
+
+
+  .visitDiv{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    
+  }
+
+  .visit{
+    font-size: 2em;
+    color: black;
+    background-color: rgb(202, 55, 55);
+    border-radius: 1rem;
+    padding: 0.3em 1em;
+    // &:hover {
+    //   background-color: beige;
+    // }
+    // height: 1em;
+  }
+  .visitIcon{
+    height: 1em;
+  }
+
+  .closeButton {
+    display: block;
+    margin-top: 20px;
+    // Add additional styles for the close button
+  }
+  

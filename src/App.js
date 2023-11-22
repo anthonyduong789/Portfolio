@@ -9,8 +9,13 @@ import Interpersonal_page from "./Other_pages";
 import Contact from "./contact";
 import SmoothScrollPage from "./SmoothScrollPage";
 import Navbar from "./navbar";
-import NavButton  from "./navButton/navButton";
+
 // import ContactFormBoostrap from "./get_in_touch";
+import HeadingAnimation from "./Compnents/headingAnimation";
+
+
+
+import Port from "./test_boostrap/port";
 
 function customScrollBy(amount, duration) {
   const perTick = amount / (duration / 10);
@@ -60,14 +65,18 @@ function App() {
 
   return (
     <div>
+      {/* <Portfolio /> */}
+    
       {/* <SmoothScrollPage /> */}
-   
-      <Navbar />
-      {/* <NavButton name="fsdf" /> */}
+
+
+      {/* <HeadingAnimation header="dfdsf"/> */}
+      <Navbar/> 
       <StartPage />
      
       <AboutMePage />
-      <Portfolio_page /> 
+      {/* <Portfolio_page />  */}
+      <Port/>
       <Contact />
       
 

@@ -9,9 +9,10 @@ const PortfolioCard = ({ title, description, image, link }) => {
     setDescriptionIsVisible(!descriptionIsVisible);
   };
   return (
-    <div style={{ height:"600px",display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', borderRadius: '10px'}}>
+    // <div style={{ height:"600px",display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', borderRadius: '10px'}}>
       
-    
+    <>
+   
       {!descriptionIsVisible &&   <img src={image} alt={title} style={{ width: '536px', height: '380px', objectFit: 'cover', borderRadius: '10px', marginBottom: "10px" }} />}
       {descriptionIsVisible && 
       
@@ -23,12 +24,15 @@ const PortfolioCard = ({ title, description, image, link }) => {
         <h3>{description}</h3>
         {/* <p>{description}</p> */}
       </div>
-
+  
       }
       {/* {descriptionIsVisible && <p>{description}</p>} */}
-
+      <div>
+        
+      </div>
       <ThreeDButton text={"Learn-More"} handleClick={click}/>
-    </div>
+      </>
+    // </div>
   );
 };
 

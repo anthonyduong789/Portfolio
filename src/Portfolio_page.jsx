@@ -5,7 +5,7 @@ import ThreeDbutton from "./Compnents/ThreeDButton";
 import AwesomeSlider from "react-awesome-slider";
 import "react-awesome-slider/dist/styles.css";
 import "react-awesome-slider/dist/custom-animations/cube-animation.css";
-
+import HeadingAnimation from "./Compnents/headingAnimation";
 import PortfolioCard from "./Compnents/portfolio_card";
 import fiveGuys from "./images/five-guys.gif";
 import gapTech from "./images/gap-tech.png";
@@ -32,48 +32,12 @@ function Portfolio_page() {
     );
   };
 
-
-
-  const aboutMeRef = useRef(null);
-  const aboutMeUnderlineRef = useRef(null);
-
-  useEffect(() => {
-    const handleIntersection = (entries, classToAdd, classToRemove) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add(classToAdd);
-        } else {
-          entry.target.classList.remove(classToRemove);
-        }
-      });
-    };
-
-    const observer = new IntersectionObserver((entries) => handleIntersection(entries, "slide-in-left", "slide-in-left"));
-    const observer2 = new IntersectionObserver((entries) => handleIntersection(entries, "slide-in-left-2", "slide-in-left-2"));
-
-    observer.observe(aboutMeRef.current);
-    observer2.observe(aboutMeUnderlineRef.current);
-
-    return () => {
-      observer.disconnect();
-      observer2.disconnect();
-    };
-  }, []);
-
-
-
-
   return (
     /* write a dive that take up minium the entire vewing screen */
     //write a dive that take up minium the entire vewing screen
     <div id="portfolio" style={{ minHeight: "100vh", width: "100%", display:"flex", justifyContent: "center", alignItems: 'center', flexDirection:'column', paddingTop:"30px"}}>
-       
-       <h1 class="portfolio" ref={aboutMeRef}>
-       Portfolio
-        </h1>
-        <div class="underline_1" ref={aboutMeUnderlineRef}></div>
-
-       
+       <HeadingAnimation header={"Portfolio"}/>
+    
       <div style={{  margin:"0", padding:"0"}} className="AwesomeSliderContainer">
         <AwesomeSlider
           animation="cubeAnimation"

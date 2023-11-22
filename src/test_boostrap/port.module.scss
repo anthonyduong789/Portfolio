@@ -1,0 +1,74 @@
+  
+  
+  $colorOfContaienr: white;
+  
+  
+  
+  .container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    width: 100%;
+    background-color: $colorOfContaienr;
+    margin: 0 auto;
+    padding: 0 15px;
+    // justify-content: center;
+    align-items: center;
+
+  }
+
+  .header_container{
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+    justify-content: center;
+    align-items: center;
+  }
+
+
+  .portfolio_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    max-height: 818px;
+    max-width: 1320px;
+    background-color: $colorOfContaienr;
+
+  }
+
+
+
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    height: 100%;
+    width: 100%;
+    max-height: 640px;
+    max-width: 1320px;
+    // margin-top: auto;
+    // overflow: hidden; /* or 'auto' if you want scrollbars */
+  }
+  
+
+@media (max-width: 1300px) {
+  .grid{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .container{
+    // min-height: 200vh;
+  }
+}
+
+@media (max-width: 700px) {
+  .grid{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .container{
+    // min-height: 200vh;
+  }
+}

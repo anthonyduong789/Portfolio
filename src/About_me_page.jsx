@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import me from "./images/anthony.png";
-
+import HeadingAnimation from "./Compnents/headingAnimation"
 
 import { useEffect, useRef } from "react";
 
@@ -29,43 +29,10 @@ function AboutMePage() {
   const team_title = "Great Team";
   const communicate = "Excellent<br/>communicator";
 
-  // must render on mount
-
-  const aboutMeRef = useRef(null);
-  const aboutMeUnderlineRef = useRef(null);
-
-  useEffect(() => {
-    const handleIntersection = (entries, classToAdd, classToRemove) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add(classToAdd);
-        } else {
-          entry.target.classList.remove(classToRemove);
-        }
-      });
-    };
-
-    const observer = new IntersectionObserver((entries) => handleIntersection(entries, "slide-in-left", "slide-in-left"));
-    const observer2 = new IntersectionObserver((entries) => handleIntersection(entries, "slide-in-left-2", "slide-in-left-2"));
-
-    observer.observe(aboutMeRef.current);
-    observer2.observe(aboutMeUnderlineRef.current);
-
-    return () => {
-      observer.disconnect();
-      observer2.disconnect();
-    };
-  }, []);
-
-
   return (
     <div  id="about" class="view" >
       <div  class="about-container">
-        <h1  class="about" ref={aboutMeRef}>
-          About Me
-        </h1>
-        <div class="underline" ref={aboutMeUnderlineRef}></div>
-
+        <HeadingAnimation header={"About Me"}/>
         <div>
           <div class="card_2">
             <div style={{ display: "flex", justifyContent: "center" }}>
