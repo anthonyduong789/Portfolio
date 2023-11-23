@@ -65,62 +65,46 @@ function Contact() {
       <div class = "underline_2">
       </div>
 
-      <div class = "form">
-      {/* <form onSubmit={handleSubmit}>
-            <input 
-                type="text" 
-                value={name} 
-                onChange={(e) => setName(e.target.value)} 
-                required 
-            />
-            <input 
-                type="email" 
-                value={email} 
-                onChange={(e) => setEmail(e.target.value)} 
-                required 
-            />
-            <textarea 
-                value={message} 
-                onChange={(e) => setMessage(e.target.value)} 
-                required 
-            ></textarea>
-            <button type="submit">Submit Form</button>
-        </form> */}
-
-
-        <div class="input-group">
-          <input
+      <form action="" className="form">
+      <input
             type="text"
             value={name}
             id="name"
             name="name"
             placeholder="Enter your name"
-            class="text_box"
+            class="input-group"
             onChange={(e) => setName(e.target.value)}
           />
-        </div>
-        <div class="input-group">
+     
+      
           <input
             type="email"
             value={email}
             id="email"
             name="email"
             placeholder="Enter your email"
-            class="text_box"
+            class="input-group"
             onChange={(e) => setEmail(e.target.value)} 
           />
-        </div>
-        <div class="input-group">
+       
+     
           <textarea
             id="message"
             name="message"
             rows="4"
             placeholder="Your Message"
-            class="text_box"
+            class="input-group"
             onChange={(e) => setMessage(e.target.value)} 
             required 
           ></textarea>
+           <div>
+          {/* <button type="submit" class="contact-submit">
+            SUBMIT
+          </button> */}
+          <ThreeDButton handleClick={handleSubmit} text="SUBMIT" />
         </div>
+      </form>
+   
 
            {/* Honeypot field (hidden) */}
            <div style={{ display: 'none' }}>
@@ -131,14 +115,9 @@ function Contact() {
                 />
             </div>
 
-        <div>
-          {/* <button type="submit" class="contact-submit">
-            SUBMIT
-          </button> */}
-          <ThreeDButton handleClick={handleSubmit} text="SUBMIT" />
-        </div>
+       
       </div>
-    </div>
+    
   );
 }
 

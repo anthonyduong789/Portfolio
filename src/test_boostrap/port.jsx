@@ -11,7 +11,7 @@ import gaptech from '../images/gap-tech.png';
 
 
 
-const images = [gaptech, gaptech, gaptech, gaptech];
+const images = [gaptech];
 const titles = ['Gap-Tech', '2', '3', 'sdffsfd', 'Anthony', 'sdffsfd'];
 const description = ['Whether mastering an instrument or a new language, scientific studies have shown that incorporating random 10-second pauses into practice sessions can significantly speed up the learning process. Gap-Tech is a simple, easy-to-use tool that allows users to customize their practice sessions with random pauses.']
 

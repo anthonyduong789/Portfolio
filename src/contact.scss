@@ -3,29 +3,48 @@
   flex-direction: column;
   align-items: center;
   // justify-content: center;
-  min-height: 70vh;
+  min-height: 80vh;
   background-color: #252934;
   padding: 0 20px;
   color: #ffffff;
   text-align: center;
+  padding-top: 2.5em;
 }
 
 .form {
-  // height: 700px;
-  width: 500px;
+
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 800px;
+
 }
 
 .input-group {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 5px;
-}
-
-.text_box {
+  margin: 0.5em 0;
+  padding: 0.5em;
+  border: 3px solid #6a6666;
+  border-radius: 0.7em;
   background-color: #1e242c;
   color: #ffffff;
-  font-size: 24px;
+  font-size: 1.3em;
 }
+.input-group:focus {
+  // border: 0.3em solid #ffffff;
+  color: black;
+  background-color: white;
+}
+.input-group:focus::placeholder {
+  // border: 0.3em solid #ffffff;
+  color: black;
+  background-color: white;
+}
+
+.input-group::placeholder {
+  color: #ffffffdf;
+}
+
+
 
 .contact-submit {
   padding: 10px 20px;

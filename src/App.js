@@ -9,6 +9,7 @@ import Interpersonal_page from "./Other_pages";
 import Contact from "./contact";
 import SmoothScrollPage from "./SmoothScrollPage";
 import Navbar from "./navbar";
+import ContactForm from "./ContactForm/ContactForm";
 
 // import ContactFormBoostrap from "./get_in_touch";
 import HeadingAnimation from "./Compnents/headingAnimation";
@@ -75,9 +76,10 @@ function App() {
       <StartPage />
      
       <AboutMePage />
-      {/* <Portfolio_page />  */}
+     
       <Port/>
       <Contact />
+      {/* <ContactForm /> */}
       
 
       
