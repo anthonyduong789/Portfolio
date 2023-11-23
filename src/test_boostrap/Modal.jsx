@@ -2,13 +2,14 @@ import React from 'react';
 import styles from './Modal.module.scss';
 import PortfolioCard from '../Compnents/portfolio_card';
 import linkImg from "../images/visitLink.png"
-
+import { useEffect } from 'react';
 
 const Modal = ({ id,title, image, description, onClose }) => {
 
   const visitClick = () => {
     window.open("https://anthonyduong789.github.io/gap-tech/")
   }
+
 
 
   return (

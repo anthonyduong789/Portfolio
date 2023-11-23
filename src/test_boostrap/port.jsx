@@ -22,11 +22,17 @@ function Port () {
   const handleCardSelect = (id) => {
     setSelectedCard(id);
     setModalOpen(true);
+    document.body.classList.add("no-scroll");
+
+
+   
   };
 
   const handleModalClose = () => {
     setSelectedCard(null);
     setModalOpen(false);
+    document.body.classList.remove("no-scroll");
+
   };
 
   const PortMeRef = React.useRef(null);
@@ -35,7 +41,11 @@ function Port () {
 
 
   return (
-   
+      
+
+      
+
+
         <div id="portfolio" className={styles.container}>
       <div className={styles.header_container}>
       <HeadingAnimation header={"Portfolio"}/>
@@ -45,6 +55,7 @@ function Port () {
      
    
       <div className={styles.grid}>
+    
             {images.map((images, index) => (
                 <Card
                 key={index}
@@ -55,10 +66,11 @@ function Port () {
             ))}
         </div>
       </div>
+      {modalOpen && ( <Modal title={titles[selectedCard]} image={images[selectedCard]} onClose={handleModalClose} description={description[selectedCard]}/>) }
 
 
      
-        {modalOpen && ( <Modal title={titles[selectedCard]} image={images[selectedCard]} onClose={handleModalClose} description={description[selectedCard]}/>) }
+    
     </div>
    
   
