@@ -4,10 +4,10 @@ import PortfolioCard from '../Compnents/portfolio_card';
 import linkImg from "../images/visitLink.png"
 import { useEffect } from 'react';
 
-const Modal = ({ id,title, image, description, onClose }) => {
+const Modal = ({ id,title, images, description, onClose, Link }) => {
 
   const visitClick = () => {
-    window.open("https://anthonyduong789.github.io/gap-tech/")
+    window.open(Link)
   }
 
 
@@ -23,9 +23,14 @@ const Modal = ({ id,title, image, description, onClose }) => {
             {title}
         </div>
         {/* <PortfolioCard image={image} description={"fhakjldfhjkasdhf"}/> */}
-        <div className={styles.imgContainer}>
+        {images.map((image, index) => (
+               <div className={styles.imgContainer}>
+               <img key={index} src={image} alt={`Enlarged card ${id}`} className={styles.modalImage} />
+             </div>
+            ) )}
+        {/* <div className={styles.imgContainer}>
           <img src={image} alt={`Enlarged card ${id}`} className={styles.modalImage} />
-        </div>
+        </div> */}
         <div className={styles.description}>
           {description}
         </div>
