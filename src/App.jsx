@@ -65,20 +65,25 @@ function App() {
   );
 
   return (
-    <div>
+    <div className="app">
       {/* <Portfolio /> */}
     
       {/* <SmoothScrollPage /> */}
-
+      <div> <Navbar/> </div>
+      <div> <StartPage /></div>
+      <div>  <AboutMePage /></div>
+      <div><Port/></div>
 
       {/* <HeadingAnimation header="dfdsf"/> */}
-      <Navbar/> 
-      <StartPage />
+      <div>  <Contact /></div>
+      
      
-      <AboutMePage />
      
-      <Port/>
-      <Contact />
+     
+    
+     
+      
+    
       {/* <ContactForm /> */}
       
 
