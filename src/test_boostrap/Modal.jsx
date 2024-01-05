@@ -4,11 +4,7 @@ import PortfolioCard from '../Compnents/portfolio_card';
 import linkImg from "../images/visitLink.png"
 import { useEffect } from 'react';
 
-const Modal = ({ id,title, images, description, onClose, Link }) => {
-
-  const visitClick = () => {
-    window.open(Link)
-  }
+const Modal = ({ id,title, images, description, onClose, DemoLink, SourceCode }) => {
 
 
 
@@ -21,6 +17,20 @@ const Modal = ({ id,title, images, description, onClose, Link }) => {
           </div>
         </div>
         <div className={styles.title}>{title}</div>
+  
+          <div className={styles.visitDiv}>
+            <a className={styles.links} href={DemoLink}>
+              {"Demo   "}
+            </a>
+            <a className={styles.links} href={SourceCode}>
+              {"Source Code"}
+            </a>
+          </div>
+
+        <div className={styles.description}>{description}</div>
+        {/* <div className={styles.visitDiv}> */}
+
+        {/* </div> */}
         {/* <PortfolioCard image={image} description={"fhakjldfhjkasdhf"}/> */}
         {images.map((image, index) => (
           <div className={styles.imgContainer}>
@@ -35,13 +45,6 @@ const Modal = ({ id,title, images, description, onClose, Link }) => {
         {/* <div className={styles.imgContainer}>
           <img src={image} alt={`Enlarged card ${id}`} className={styles.modalImage} />
         </div> */}
-        <div className={styles.description}>{description}</div>
-        <div className={styles.visitDiv}>
-          <button onClick={visitClick} className={styles.visit}>
-            {"Visit"}
-            <img src={linkImg} className={styles.visitIcon} />
-          </button>
-        </div>
       </div>
     </div>
   );

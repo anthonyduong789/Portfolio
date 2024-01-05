@@ -11,15 +11,29 @@ import LearningSite from "../images/Learning-Site.png";
 import LearningSite1 from "../images/LearningSite1.png";
 import LearningSite2 from "../images/LearningSite2.png";
 
-const images = [
-  [LearningSite, LearningSite1, LearningSite2],
-  [gaptech],
-];
-const titles = ["Gap-Tech", "2", "3", "sdffsfd", "Anthony", "sdffsfd"];
+function importAll(r) {
+  return r.keys().map(r);
+}
+
+const Hitch = importAll(
+  require.context("../images/Hitch", false, /\.(png|jpe?g|svg)$/)
+);
+const HitchImages = [...Hitch].reverse();
+
+const images = [[LearningSite, LearningSite1, LearningSite2], HitchImages];
+const titles = ["Gap-Tech", "Hitch", "3", "sdffsfd", "Anthony", "sdffsfd"];
 const description = [
   "Whether mastering an instrument or a new language, scientific studies have shown that incorporating random 10-second pauses into practice sessions can significantly speed up the learning process. Gap-Tech is a simple, easy-to-use tool that allows users to customize their practice sessions with random pauses. In addtion has other useful Learning tools to enhance your learning.",
+  "Mobile app designed for drivers to share their planned routes with potential riders. This platform enables passengers to request to join trips if the driver's destination aligns closely with their own desired route. This system offers drivers the opportunity to earn extra income by accommodating passengers on journeys they are already undertaking. My application used React-Native for the frontend and a Node.js as the backend with a SQL Database.",
 ];
-const links = ["https://anthonyduong789.github.io/Learning-Site/"];
+const Demos = [
+  "https://anthonyduong789.github.io/Learning-Site/",
+  "https://youtu.be/AOayRrtdtJw?si=9C4g9FlLsr_lKY-_",
+];
+const SourceCode = [
+  "https://github.com/anthonyduong789/Learning-Site",
+  "https://github.com/orgs/HitchApp115/repositories",
+];
 
 function Port() {
   const [selectedCard, setSelectedCard] = useState(null);
@@ -61,7 +75,6 @@ function Port() {
 
           // <div />
         ))}
-        <img src={images[0]} />
       </div>
       {modalOpen && (
         <Modal
@@ -69,7 +82,8 @@ function Port() {
           images={images[selectedCard]}
           onClose={handleModalClose}
           description={description[selectedCard]}
-          Link={links[selectedCard]}
+          DemoLink={Demos[selectedCard]}
+          SourceCode={SourceCode[selectedCard]}
         />
       )}
     </div>

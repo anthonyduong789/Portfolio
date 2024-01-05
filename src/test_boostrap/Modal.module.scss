@@ -38,12 +38,21 @@ $modalWidth: 35em;
   .modalImage {
     max-width: $modalWidth/1.5;
     // display: block; // For centering if necessary
+    margin-bottom: 20px;
   }
+  .links {
+  /* other styles */
+  font-size: larger;
+  margin-right: 10px; /* adjust the value as needed */
+}
+.links:nth-child(2) {
+  margin-left: 10px;
+}
 
   .exit{
     display: flex;
     justify-content: right;
-
+    
     position: sticky;
     top: 0;
     // right: auto;
