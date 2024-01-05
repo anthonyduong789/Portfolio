@@ -43,11 +43,15 @@ $modalWidth: 35em;
   .exit{
     display: flex;
     justify-content: right;
-    cursor: pointer;
+
+    position: sticky;
+    top: 0;
+    // right: auto;
   }
   .Xicon{
     font-size: 30px;
     margin-right: 10px;
+    cursor: pointer;
   }
 
   .title{

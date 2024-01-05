@@ -98,3 +98,19 @@ $pink-shadow: #ffe3e2;
     }
   }
 }
+@media screen and (max-width: 768px) {
+  .button3d {
+      background: $pink;
+      transform: translate(0, 0.25em);
+      &::before {
+        box-shadow: 0 0 0 2px $pink-border, 0 0.5em 0 0 $pink-shadow;
+        transform: translate3d(0, 0.5em, -1em);
+      }
+      .rotate-right {
+        // transform: rotate(90deg);
+        animation: rotate90Degrees 300ms linear forwards;
+        /*make me a trandform functon that will have frames 0 33 66 100 that rotate right*/
+
+      }
+  }
+}

@@ -14,14 +14,13 @@ const SearchIcon = ({ width, height, fill }) => (
 const Card = ({ id, image, onSelect }) => {
   return (
     <div className={styles.card} onClick={() => onSelect(id)}>
-      <div className={styles.imgBackground}>
+
       <img className={styles.img} src={image} alt={`Card ${id}`}/>
-      </div>
-      
+            
       <div className={styles.iconOverlay}>
-        <SearchIcon width={80} height={80} fill={"white"} />
+        <SearchIcon className={styles.icon} width={80} height={80} fill={"white"} />
       </div>
-   
+    
      
    
     </div>

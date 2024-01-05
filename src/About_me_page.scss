@@ -11,8 +11,6 @@ $me-width: 240px;
 
 // color of About and underline
 $about-font-size: 35px;
-$about-color: #444649;
-$underline-color: #444649;
 $c1: black;
 
 $background: #FDE5EC;
@@ -73,40 +71,7 @@ $background: #FDE5EC;
     justify-content: center;
  
 }
-.about{
-    color: $about-color;
-    font-family: 'Inter Regular', sans-serif;
-    font-size: $about-font-size;
-    font-weight: boldest;
-    margin-bottom: 8px;
-    
-    opacity: 0;
 
-    // animation: slide-in-left 0.7s ease-in-out;
-    // animation-fill-mode: forwards;
-
-}
-
-.underline{
-    height: $underline-height;
-    width: $underline-width;
-    background-color: $underline-color;
-    margin-bottom: 15px;
-    opacity: 0;
-    // animation: slide-in-left 0.7s ease-in-out 0.5s;
-    // animation-fill-mode: forwards;
-
-}
-
-.slide-in-left{
-    animation: slide-in-left 0.7s ease-in-out 0.5s;
-    animation-fill-mode: forwards;
-}
-
-.slide-in-left-2{
-    animation: slide-in-left 0.7s ease-in-out 1s;
-    animation-fill-mode: forwards;
-}
 
 .card_4{
     display: grid;

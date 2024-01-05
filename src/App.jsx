@@ -9,6 +9,7 @@ import Interpersonal_page from "./Other_pages";
 import Contact from "./contact";
 import SmoothScrollPage from "./SmoothScrollPage";
 import Navbar from "./navbar";
+import ResponsiveNavbar from "./Compnents/responsiveNavBar";
 import ContactForm from "./ContactForm/ContactForm";
 
 // import ContactFormBoostrap from "./get_in_touch";
@@ -53,29 +54,21 @@ function App() {
     };
   }, []);
 
-  const Right = (
-    <div>
-      <div
-        className="right"
-        style={{ background: "green", height: "100px", width: "100px" }}
-      >
-        <h1>Right</h1>
-      </div>
-    </div>
-  );
+
 
   return (
     <div className="app">
       {/* <Portfolio /> */}
     
-      {/* <SmoothScrollPage /> */}
-      <div> <Navbar/> </div>
-      <div> <StartPage /></div>
-      <div>  <AboutMePage /></div>
-      <div><Port/></div>
 
-      {/* <HeadingAnimation header="dfdsf"/> */}
-      <div>  <Contact /></div>
+      {/* <SmoothScrollPage /> */}
+      {/* <div> <Navbar/> </div> */}
+      <ResponsiveNavbar />
+      <div> <StartPage /></div>
+      <AboutMePage />
+      <Port/>
+
+      <Contact />
       
      
      

@@ -2,7 +2,7 @@ import React from "react";
 import styles from "./headingAnimation.module.scss";
 
 
-function HeadingAnimation({header}) {
+function HeadingAnimation({header, headerColor, underlineColor}) {
 
 
     const headerMeRef = React.useRef(null);
@@ -49,7 +49,7 @@ function HeadingAnimation({header}) {
   
 
     return (
-        <><h1 className={headerClass} ref={headerMeRef}>{header}</h1><div className={underlineClass} ref={UnderlineRef}></div></>
+        <><h1 style={{color: headerColor}} className={headerClass} ref={headerMeRef}>{header}</h1><div style={{backgroundColor:underlineColor}} className={underlineClass} ref={UnderlineRef}></div></>
     );
 };
 

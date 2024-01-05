@@ -1,15 +1,15 @@
 
-$header-color: #444649;
+// $header-color: #444649;
 $header-font-size: 35px;
 
 
-$underline-color: #444649;
+// $underline-color: #444649;
 $underline-width: 80px;
 $underline-height: 4px;
 
 
 .header{
-    color: $header-color;
+    // color: $header-color;
     font-family: 'Inter Regular', sans-serif;
     font-size: $header-font-size;
     font-weight: boldest;
@@ -20,7 +20,7 @@ $underline-height: 4px;
 .underline{
     height: $underline-height;
     width: $underline-width;
-    background-color: $underline-color;
+    // background-color: $underline-color;
     margin-bottom: 15px;
     opacity: 0;
     // animation: slide-in-left 0.7s ease-in-out 0.5s;
@@ -43,25 +43,25 @@ $underline-height: 4px;
 @keyframes slide-in-left {
 
     0% {
-        transform: translateX(-100%);
+        transform: translateX(-30px);
         opacity: 0;
     }
-    20% {
-        transform: translateX(-80%);
+    // 20% {
+    //     transform: translateX(-80%);
 
-    }
-    40% {
-        transform: translateX(-60%);
-        opacity: 0.6;   
-    }
-    60% {
-        transform: translateX(-40%);
+    // }
+    // 40% {
+    //     transform: translateX(-60%);
+    //     opacity: 0.6;   
+    // }
+    // 60% {
+    //     transform: translateX(-40%);
 
-    }
-    80% {
-        transform: translateX(-20%);
-        opacity: 0.9;
-    }
+    // }
+    // 80% {
+    //     transform: translateX(-20%);
+    //     opacity: 0.9;
+    // }
     100% {
         transform: translateX(0);
         opacity: 1;

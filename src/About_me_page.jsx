@@ -32,7 +32,7 @@ function AboutMePage() {
   return (
     <div  id="about" class="view" >
       <div  class="about-container">
-        <HeadingAnimation header={"About Me"}/>
+        <HeadingAnimation header={"About Me"} headerColor={"black"} underlineColor={"black"}/>
         <div>
           <div class="card_2">
             <div style={{ display: "flex", justifyContent: "center" }}>
