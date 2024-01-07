@@ -7,12 +7,12 @@ import HeadingAnimation from "./Compnents/headingAnimation";
 function AboutMePage() {
     return (
       <div
-      id="about"
+        id="about"
         style={{
           display: "flex",
           flexDirection: "column",
           alignItems: "center",
-          backgroundColor: "#F2F1EB",
+          backgroundColor: "#FFFFFF",
         }}
       >
         <div
@@ -20,7 +20,6 @@ function AboutMePage() {
             display: "flex",
             flexDirection: "column",
             alignItems: "center",
-            backgroundColor: "#F2F1EB",
           }}
         >
           <HeadingAnimation

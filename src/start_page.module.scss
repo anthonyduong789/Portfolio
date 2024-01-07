@@ -5,6 +5,15 @@
   --typewriterCharacters: 26;
 }
 
+.portfolioImage{
+  width: 100%;
+  max-width: 450px;
+  // animation: float 6s ease-in-out infinite;
+  overflow: hidden;
+}
+
+
+
 .box {
 
   // background-color: #ff7a81;
@@ -12,9 +21,12 @@
   font-family: 'Rubik', sans-serif;
   
   min-height: 100vh;
-  display: grid;
-  place-content: center;
-  text-align: center;
+  // display: grid;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  // place-content: center;
+  // text-align: center;
   font-size: 2rem;
   // background-color: rgb(157, 203, 226);
   
@@ -95,7 +107,9 @@
 }
 @media screen and (max-width: 600px) {
   .main_text {
-    font-size: clamp(1rem, 3vw + 1rem, 4rem);
+    // font-size: clamp(1rem, 3vw + 1rem, 4rem);
+    font-size: 1.4rem;
+    margin-bottom: 30px;
   }
   .subtitle {
     font-size: 1.5rem;
@@ -103,4 +117,20 @@
   #yt-link {
     font-size: 0.8rem;
   }
+}
+
+
+@keyframes float {
+	0% {
+		box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+		transform: translatey(0px);
+	}
+	50% {
+		box-shadow: 0 25px 15px 0px rgba(0,0,0,0.2);
+		transform: translatey(-20px);
+	}
+	100% {
+		box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+		transform: translatey(0px);
+	}
 }

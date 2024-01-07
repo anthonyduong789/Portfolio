@@ -4,6 +4,7 @@ import styles from "./start_page.module.scss";
 // import CoolButton from "./cool_button1";
 import Pink3dButton from "./Compnents/Pink_3d_button";
 import sound from "./images/onclick.wav";
+import Portfolio from "./images/MeLogo.png";
 
 
 
@@ -21,19 +22,23 @@ function StartPage() {
   };
 
   return (
-    <div id ="home">
+    <div id="home">
       <div className={styles.box}>
         {/* <div > */}
-          <h1 className={styles.main_text}>Hello, my name is Anthony.</h1>
-          <p className={styles.subtitle}>Welcome to my website!</p>
+        <div className={styles.avatar}>
+          <img className={styles.portfolioImage} src={Portfolio} />
+        </div>
 
-          <Pink3dButton
-            onClick={() => {
-              handleClick('about');
-            }}
-            className={styles.subtitle}
-            text={"View my site"}
-          />
+        <h1 className={styles.main_text}>Hello, my name is Anthony.</h1>
+        <p className={styles.subtitle}>Welcome to my website!</p>
+
+        <Pink3dButton
+          onClick={() => {
+            handleClick("about");
+          }}
+          className={styles.subtitle}
+          text={"View my site"}
+        />
         {/* </div> */}
       </div>
     </div>
