@@ -1,6 +1,6 @@
 import React from 'react';
 import ThreeDButton from './ThreeDButton';
-import FlipCard from './FlipCard';
+
 
 const PortfolioCard = ({ title, description, image, link }) => {
   const [descriptionIsVisible, setDescriptionIsVisible] = React.useState(false);

@@ -2,19 +2,12 @@ import "./App.css";
 import React from "react";
 import StartPage from "./start_page";
 import { useRef, useState, useEffect } from "react";
-import AboutMePage from "./About_me_page";
-import Portfolio_page from "./Portfolio_page";
-import ThreeDbutton from "./Compnents/ThreeDButton";
-import Interpersonal_page from "./Other_pages";
+// import AboutMePage from "./About_me_page";
+
 import Contact from "./contact";
-import SmoothScrollPage from "./SmoothScrollPage";
-import Navbar from "./navbar";
+
 import ResponsiveNavbar from "./Compnents/responsiveNavBar";
-import ContactForm from "./ContactForm/ContactForm";
-
-// import ContactFormBoostrap from "./get_in_touch";
-import HeadingAnimation from "./Compnents/headingAnimation";
-
+import AboutMePage from "./AboutMePage";
 
 
 import Port from "./test_boostrap/port";
@@ -59,29 +52,21 @@ function App() {
   return (
     <div className="app">
       {/* <Portfolio /> */}
-    
 
       {/* <SmoothScrollPage /> */}
       {/* <div> <Navbar/> </div> */}
       <ResponsiveNavbar />
-      <div> <StartPage /></div>
+      <div>
+        {" "}
+        <StartPage />
+      </div>
       <AboutMePage />
-      <Port/>
+      {/* <AboutMePage /> */}
+      <Port />
 
       <Contact />
-      
-     
-     
-     
-    
-     
-      
-    
+
       {/* <ContactForm /> */}
-      
-
-      
-
     </div>
   );
 }
