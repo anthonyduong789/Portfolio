@@ -111,3 +111,9 @@ $modalWidth: 35em;
     // Add additional styles for the close button
   }
   
+@media screen and (max-width: 600px) {
+  $modalHeight: 90%;
+  .modal{
+    height: $modalHeight;
+  }
+}
