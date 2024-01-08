@@ -5,11 +5,23 @@
   --typewriterCharacters: 26;
 }
 
+
+
+ .ImageContainer{
+ width: clamp(300px, 50vmin + 2rem, 450px);
+ height: clamp(300px, 50vmin + 2rem, 50vh);
+ }
 .portfolioImage{
   width: 100%;
-  max-width: 450px;
+  height: 100%;
+  // max-width: 350px;  
+
+  object-fit: cover;
   // animation: float 6s ease-in-out infinite;
-  overflow: hidden;
+  // overflow: hidden;
+
+  // padding: 0;
+  // margin: 0;
 }
 
 
@@ -21,23 +33,31 @@
   font-family: 'Rubik', sans-serif;
   
   min-height: 100vh;
+  // max-height: 100vh;
   // display: grid;
   display: flex;
   flex-direction: column;
   align-items: center;
+  // justify-content: space-between;
+  // gap: 1rem;
   // place-content: center;
   // text-align: center;
-  font-size: 2rem;
+  
   // background-color: rgb(157, 203, 226);
   
 }
 
 .main_text {
-  font-size: clamp(1rem, 3vw + 1rem, 4rem);
+  // font-size: clamp(0.8rem, 2.5vw + 1rem, 4rem);
+  font-size: clamp(2.5vw, 3vw + 1rem , 4.5rem);
+  // line-height: 20vh;
   position: relative;
   font-family: "Source Code Pro", monospace;
   position: relative;
   width: max-content;
+ 
+  // padding: 0;
+  margin: clamp(0vh, 2vh, 15vh);
 
 }
 
@@ -68,11 +88,32 @@
 .subtitle {
   color: #000000b3;
   font-family: Rubik, sans-serif;
-  font-size: 2rem;
+  font-size: clamp(1.5vw, 1vw + 1rem , 3rem);
   font-weight: 600;
   opacity: 0;
   transform: translateY(3rem);
   animation: fadeInUp 2s ease calc(var(--typewriterSpeed) + 1.5s) forwards;
+
+  // margin: 4vh, 0;
+}
+
+.headerBox{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  // background-color: #ff7a81;
+  // border: 2px solid black;
+  // border-radius: 10px;
+  // box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+  // padding: 20px;
+  // width: 100%;
+  // max-width: 1200px;
+  // height: 100%;
+  // max-height: 600px;
+  // overflow: hidden;
+  // position: relative;
+  // z-index: 1;
+  // animation: float 6s ease-in-out infinite;
 }
 
 @keyframes typewriter {
@@ -107,16 +148,16 @@
 }
 @media screen and (max-width: 600px) {
   .main_text {
-    // font-size: clamp(1rem, 3vw + 1rem, 4rem);
-    font-size: 1.4rem;
-    margin-bottom: 30px;
+    font-size: clamp(2.5vw, 2vw + 1rem , 4.5rem);
+    margin-top: 8vh;
   }
   .subtitle {
-    font-size: 1.5rem;
-    transform: translateY(1.5rem);
+    margin-top: 2vh;
+    margin-bottom: 4vh;
+    //  margin: 0vh, 15vh;
   }
-  #yt-link {
-    font-size: 0.8rem;
-  }
+  // #yt-link {
+  //   font-size: 0.8rem;
+  // }
 }
 

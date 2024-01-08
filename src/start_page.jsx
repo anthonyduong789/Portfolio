@@ -25,11 +25,13 @@ function StartPage() {
     <div id="home">
       <div className={styles.box}>
         {/* <div > */}
-        <div className={styles.avatar}>
+
+        <div className={styles.ImageContainer}>
           <img className={styles.portfolioImage} src={Portfolio} />
         </div>
-
-        <h1 className={styles.main_text}>Hello, my name is Anthony.</h1>
+        
+          <h1 className={styles.main_text}>Hello, my name is Anthony.</h1>
+        
         <p className={styles.subtitle}>Welcome to my website!</p>
 
         <Pink3dButton
