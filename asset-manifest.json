@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Portfolio/static/css/main.a8194e4d.css",
-    "main.js": "/Portfolio/static/js/main.df5952ac.js",
+    "main.css": "/Portfolio/static/css/main.2bbe9aed.css",
+    "main.js": "/Portfolio/static/js/main.a9a82e05.js",
     "static/js/787.3ba5e41c.chunk.js": "/Portfolio/static/js/787.3ba5e41c.chunk.js",
     "static/media/LearningSite1.png": "/Portfolio/static/media/LearningSite1.835660fdb765c355d3f0.png",
     "static/media/MeLogo.png": "/Portfolio/static/media/MeLogo.9fceb38a458d0b1a7d65.png",
@@ -21,12 +21,12 @@
     "static/media/Learning-Site.png": "/Portfolio/static/media/Learning-Site.7ac5e59dd66164357895.png",
     "static/media/gap-tech.png": "/Portfolio/static/media/gap-tech.3a849b803c2cb8951747.png",
     "index.html": "/Portfolio/index.html",
-    "main.a8194e4d.css.map": "/Portfolio/static/css/main.a8194e4d.css.map",
-    "main.df5952ac.js.map": "/Portfolio/static/js/main.df5952ac.js.map",
+    "main.2bbe9aed.css.map": "/Portfolio/static/css/main.2bbe9aed.css.map",
+    "main.a9a82e05.js.map": "/Portfolio/static/js/main.a9a82e05.js.map",
     "787.3ba5e41c.chunk.js.map": "/Portfolio/static/js/787.3ba5e41c.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.a8194e4d.css",
-    "static/js/main.df5952ac.js"
+    "static/css/main.2bbe9aed.css",
+    "static/js/main.a9a82e05.js"
   ]
 }
